@@ -12,11 +12,14 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",
     "@tailwindcss/vite": "^4.1.10",
+    "lucide-react": "^0.522.0",
     "motion": "^12.18.1",
     "parcel": "^2.15.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-force-graph-3d": "^1.27.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-parallax-tilt": "^1.7.298",
     "react-router-dom": "^7.6.2",
     "tailwindcss-primeui": "^0.6.1",
     "three-spritetext": "^1.9.6"
