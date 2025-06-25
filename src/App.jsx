@@ -43,7 +43,7 @@ export default function App() {
       <section ref={aboutRef} className="min-h-screen flex items-center" id="about">
         <AboutMe />
       </section>
-      <section className="min-h-screen flex items-center" id="projects">
+<section id="projects" className="min-h-screen overflow-x-auto">
         <Projects />
       </section>
       <section ref={footerRef} id="contact" className="h-screen flex items-center justify-center bg-blackish text-bone">

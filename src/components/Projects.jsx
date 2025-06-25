@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 
 const projects = [
   {
@@ -86,52 +85,52 @@ export default function Projects() {
   return (
     <section className="relative bg-blackish text-bone min-h-screen py-20">
       <div className="flex items-center justify-between px-10 md:px-20 mb-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-electric">Projects</h2>
+        <h2 className="text-3xl md:text-5xl font-thin text-electric">Projects</h2>
       </div>
 
       <motion.div
+        className="flex gap-10 overflow-x-auto snap-x snap-mandatory px-10 md:px-20 py-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="grid gap-8 px-10 grid-cols-1 w-full md:px-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        transition={{ duration: 0.8 }}
       >
+        <div className="flex gap-6 w-fit px-10 md:px-20 py-6">
+
         {projects.map((proj, i) => (
           <motion.div
             key={proj.id}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="snap-start min-w-[80vw] md:min-w-[60vw] h-[500px] relative"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
             viewport={{ once: true }}
           >
-            <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.8} className="rounded-xl">
-              <Link
-                to={`/projects/${proj.id}`}
-                className="relative backdrop-filter backdrop-brightness-150 backdrop-blur-md bg-blackish/ hover:bg-white/10 transition-all duration-300 rounded-xl border border-bone/20 hover:border-electric p-6 h-[360px] flex flex-col justify-between overflow-hidden shadow-md"
-              >
-                <div className="absolute inset-0">
-                  <img
-                    src={proj.thumbnail}
-                    alt={`${proj.title} background`}
-                    className="object-cover w-full h-full opacity-10 hover:opacity-30 transition-opacity duration-300"
-                  />
+            <Link
+              to={`/projects/${proj.id}`}
+              className="group relative block w-full h-full overflow-hidden rounded-xl shadow-xl"
+            >
+              <img
+                src={proj.thumbnail}
+                alt={`${proj.title} background`}
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20 z-10"></div>
+              <div className="relative z-20 p-8 flex flex-col justify-end h-full">
+                <h3 className="text-3xl font-thin text-electric drop-shadow mb-2">{proj.title}</h3>
+                <p className="text-bone/90 text-sm font-mono mb-3">{proj.subtitle}</p>
+                <p className="text-bone/70 text-sm line-clamp-3 max-w-xl">{proj.description}</p>
+                <div className="flex flex-wrap gap-2 mt-4 text-xs font-mono">
+                  {proj.tech.map((tool, i) => (
+                    <span key={i} className="bg-electric text-blackish px-3 py-1 rounded-full">
+                      {tool}
+                    </span>
+                  ))}
                 </div>
-
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold font-mono text-bone/90 mb-1">{proj.title}</h3>
-                  <p className="text-sm font-mono text-bone/80 mb-2">{proj.subtitle}</p>
-                  <p className="text-sm text-bone/80 line-clamp-4">{proj.description}</p>
-                  <div className="flex flex-wrap gap-2 mt-4 text-xs text-blackish font-mono">
-                    {proj.tech.map((tool, i) => (
-                      <span key={i} className="bg-electric/10 border border-electric/20 px-2 py-1 rounded-full text-electric">
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            </Tilt>
+              </div>
+            </Link>
           </motion.div>
         ))}
+        </div>
       </motion.div>
     </section>
   );
