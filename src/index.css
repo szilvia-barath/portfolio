@@ -8,9 +8,9 @@
   margin: 0;
 }
 
-
-
-
+body {
+background: #0e0e0e;
+}
 
 
 
@@ -46,7 +46,119 @@
   background: #555;
 }
 
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
 
 .call-to-action {
   margin-left: 6rem;
+}
+
+/* Glitch & Scanline Base Effects */
+
+
+.glitch-text {
+  position: relative;
+  color: white;
+  text-shadow: 2px 0 purple, -2px 0 blue;
+  animation: glitch-flicker 1s infinite;
+}
+
+.glitch-text span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  overflow: hidden;
+}
+
+.glitch-text span:first-child {
+  animation: glitch-top 1s infinite;
+  color: cyan;
+}
+
+.glitch-text span:last-child {
+  animation: glitch-bottom 1s infinite;
+  color: magenta;
+}
+
+
+
+@keyframes glitch-top {
+  0% {
+    clip-path: inset(0 0 90% 0);
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    clip-path: inset(0 0 85% 0);
+    transform: translate(2px, 2px);
+  }
+  100% {
+    clip-path: inset(0 0 90% 0);
+    transform: translate(-1px, 1px);
+  }
+}
+
+@keyframes glitch-bottom {
+  0% {
+    clip-path: inset(80% 0 0 0);
+    transform: translate(2px, 2px);
+  }
+  50% {
+    clip-path: inset(85% 0 0 0);
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    clip-path: inset(80% 0 0 0);
+    transform: translate(1px, -1px);
+  }
+}
+
+@keyframes glitch-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.8;
+  }
+  66% {
+    opacity: 0.3;
+  }
+}
+
+
+.scanlines::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(151,37,245,0.08) 0px,
+    rgba(127,10,130,0.08) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+
+
+.animated-gradient {
+  animation: animateBg 20s linear infinite;
+  background-image: linear-gradient(0deg,#1b1d1b,#e100ff,#ffade1,#302c30,#1b1d1b,#e100ff);
+  background-size: 100% 500%;
+}
+@keyframes animateBg {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
 }

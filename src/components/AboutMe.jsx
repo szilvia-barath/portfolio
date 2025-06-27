@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import cv from '/cv.pdf';
+
 const timelineItems = [
   { year: '2015', label: 'BA in English and Portuguese Studies, ELTE & NOVA' },
   { year: '2018', label: 'MA in Language Education (EN & HU), ELTE' },
@@ -14,6 +15,8 @@ const tools = [
  'Webflow', 'WordPress', 'Figma', 'Photoshop', 'Canva', 'Blender', 'ChatGPT', 'LeonardoAI'
 ];
 
+
+
 export default function AboutMe() {
   return (
     <motion.section
@@ -21,10 +24,10 @@ export default function AboutMe() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="bg-blackish text-bone px-6 py-20 md:px-20"
+      className="px-6 py-20 bg-blackish text-bone md:px-20"
     >
       <motion.h2
-        className="text-3xl md:text-5xl font-thin text-electric ml-9 mb-8"
+        className="mb-8 text-3xl font-thin md:text-5xl text-electric ml-9"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1, duration: 0.6 }}
@@ -34,20 +37,20 @@ export default function AboutMe() {
       </motion.h2>
 
       <motion.p
-        className="max-w-4xl text-lg px-10  text-justify mb-5"
+        className="max-w-4xl px-10 mb-5 text-lg text-justify"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         viewport={{ once: true }}
       >I believe the most meaningful work happens between disciplines — where code, culture, language, and design intersect. My background spans frontend development, digital humanities, and language education, driven by the conviction that real knowledge is inherently interdisciplinary.       </motion.p>
  <motion.p
-        className="max-w-4xl text-lg px-10 text-justify mb-10"
+        className="max-w-4xl px-10 mb-10 text-lg text-justify"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         viewport={{ once: true }}
       >I create interfaces and experiences that are  technically precise and culturally and socially impactful at the same time — tools that bridge boundaries, educate, and inspire new perspectives.</motion.p>
-      <div className="border-l-2 border-electric pl-20 mb-12 ml-20 space-y-8">
+      <div className="pl-20 mb-12 ml-20 space-y-8 border-l-2 border-electric">
         {timelineItems.map((item, i) => (
           <motion.div
             key={i}
@@ -58,7 +61,7 @@ export default function AboutMe() {
             viewport={{ once: true }}
           >
             <div className="absolute  top-1.5 h-3 w-3" />
-            <p className="text-sm font-mono text-bone/80">
+            <p className="font-mono text-sm text-bone/80">
               <span className="font-semibold text-bone">{item.year}</span> — {item.label}
             </p>
           </motion.div>
@@ -66,21 +69,21 @@ export default function AboutMe() {
               </div>
 
          <motion.p
-        className="max-w-4xl text-lg px-10  text-justify mb-5"
+        className="max-w-4xl px-10 mb-5 text-lg text-justify"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         viewport={{ once: true }}
       >I’m open to remote roles, creative collaborations, and funded research or PhD opportunities. I work best in inclusive teams that value creativity, flexibility, and curiosity. </motion.p>
           <motion.p
-        className="max-w-4xl text-lg px-10  text-justify mb-5"
+        className="max-w-4xl px-10 mb-5 text-lg text-justify"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         viewport={{ once: true }}
       >Whether through development, research, or creative work, I’m driven to create digital spaces for care, expression, and critical insight.</motion.p>
          <motion.p
-        className="max-w-4xl font-thin px-10  text-justify mb-5"
+        className="max-w-4xl px-10 mb-5 font-thin text-justify"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
@@ -89,7 +92,7 @@ export default function AboutMe() {
 
 
       <motion.h3
-        className="text-xl px-5 font-semibold mb-2"
+        className="px-5 mb-2 text-xl font-semibold"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
@@ -102,7 +105,7 @@ export default function AboutMe() {
         {tools.map((tool, i) => (
           <motion.span
             key={i}
-            className="px-3 py-3 m-3 d-flex flex-row text-bone text-sm font-mono"
+            className="flex-row px-3 py-3 m-3 font-mono text-sm d-flex text-bone"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4 + i * 0.05, duration: 0.3 }}
@@ -116,7 +119,7 @@ export default function AboutMe() {
       <motion.a
         href={cv}
         download
-        className="inline-block px-4 py-2 font-mono font-bold border-l-4 ml-6  border-x-electric hover:bg-blackish hover:text-electric transition"
+        className="inline-block px-4 py-2 ml-6 font-mono font-bold transition border-l-4 border-x-electric hover:bg-blackish hover:text-electric"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.6 }}

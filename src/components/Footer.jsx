@@ -15,25 +15,25 @@ export default function Footer() {
       initial={{ opacity: 0, y: 50 }}
       animate={mounted ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1, ease: 'easeOut' }}
-      className="relative flex flex-col justify-center items-center h-screen w-full bg-blackish text-bone px-6 py-10"
+      className="relative flex flex-col items-center justify-center w-full h-screen px-6 py-10 animated-gradient"
     >
-      <div className="text-center  max-w-xl">
-        <h2 className="text-5xl font-mono md:text-5xl  mb-4 text-electric">
+      <div className="max-w-xl text-center">
+        <h2 className="mb-4 font-mono text-5xl md:text-5xl text-electric">
          Let’s create something meaningful together.
         </h2>
-        <p className="text-bone  text-lg mb-8">
+        <p className="mb-8 text-lg text-bone">
 If you’re building cultural tools, experimental frontend, or human-centered AI, I’d love to hear from you.
         </p>
 
         <a
           href="mailto:szilvia.barat@gmail.com"
-          className="inline-block px-6 py-3 font-mono bg-electric text-blackish rounded hover:bg-white hover:text-black transition text-lg font-semibold"
+          className="inline-block px-6 py-3 font-mono text-lg font-semibold transition rounded bg-electric text-blackish hover:bg-white hover:text-black"
         >
           Get in touch
         </a>
       </div>
 
-      <div className="absolute bottom-8 flex gap-6 text-sm text-bone/60">
+      <div className="absolute flex gap-6 text-sm bottom-8 text-bone/60">
         <a href="https://github.com/szilvia-barath" target="_blank" rel="noopener noreferrer" className="hover:text-electric">
           GitHub
         </a>

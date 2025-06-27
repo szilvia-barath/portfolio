@@ -1,7 +1,7 @@
 // src/pages/Projects.jsx
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import Ticker from 'framer-motion-ticker';
 
 const projects = [
   {
@@ -21,6 +21,8 @@ const projects = [
     description: 'A multisensory web piece that visualizes an emotional, anti-fascist speech through color, vibration, and sound. With hidden history, tagged emotion, and shareable resistance.',
     tech: ['React', 'Canvas', 'WebAudio API'],
     keywords: ['creative coding', 'audio-visual experience', 'synesthesia', 'poetic UI'],
+        thumbnail: '/hymn.gif',
+
   },
   {
     id: 'ada-lovelace-storytelling',
@@ -30,6 +32,8 @@ const projects = [
       'A feminist-cyberpunk tribute to Ada Lovelace — blending interactive parallax narrative, archival collage, and a mood-shifting AI chatbot. This project reclaims her legacy while exploring how code, gender, and imagination intersect.',
     tech: ['HTML', 'parallax', 'JavaScript', 'CSS', 'motion-viewer', '3d avatar', 'Europeana Archive'],
     keywords: ['history', 'interactive narrative', 'AI chatbot', '3D avatar'],
+            thumbnail: '/ada.gif',
+
   },
   {
     id: 'vocabulary-of-resistance',
@@ -39,6 +43,7 @@ const projects = [
       'An interactive frontend prototype that visualizes the evolving conceptual vocabulary of the Multilingual artist code (MAC). Designed as a semantic map for creative resistance.',
     tech: ['React', 'Framer Motion', 'Unsplash API', 'TailwindCSS', 'Three.js'],
     keywords: ['ethics', 'network', 'linguistics', 'surveillance capitalism', 'MAC'],
+      thumbnail: '/vocab.gif',
   },
   {
     id: 'grammar-of-resistance',
@@ -83,55 +88,44 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="relative bg-blackish text-bone min-h-screen py-20">
-      <div className="flex items-center justify-between px-10 md:px-20 mb-10">
-        <h2 className="text-3xl md:text-5xl font-thin text-electric">Projects</h2>
+    <section className="relative min-h-screen py-20 text-bone" >
+      <div className="px-6 mb-10 md:px-20">
+        <h2 className="text-4xl font-light tracking-tight md:text-6xl text-electric">Projects</h2>
       </div>
 
-      <motion.div
-        className="flex gap-10 overflow-x-auto snap-x snap-mandatory px-10 md:px-20 py-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="flex gap-6 w-fit px-10 md:px-20 py-6">
-
-        {projects.map((proj, i) => (
-          <motion.div
-            key={proj.id}
-            className="snap-start min-w-[80vw] md:min-w-[60vw] h-[500px] relative"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            viewport={{ once: true }}
-          >
-            <Link
-              to={`/projects/${proj.id}`}
-              className="group relative block w-full h-full overflow-hidden rounded-xl shadow-xl"
-            >
-              <img
-                src={proj.thumbnail}
-                alt={`${proj.title} background`}
-                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-80 transition duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20 z-10"></div>
-              <div className="relative z-20 p-8 flex flex-col justify-end h-full">
-                <h3 className="text-3xl font-thin text-electric drop-shadow mb-2">{proj.title}</h3>
-                <p className="text-bone/90 text-sm font-mono mb-3">{proj.subtitle}</p>
-                <p className="text-bone/70 text-sm line-clamp-3 max-w-xl">{proj.description}</p>
-                <div className="flex flex-wrap gap-2 mt-4 text-xs font-mono">
-                  {proj.tech.map((tool, i) => (
-                    <span key={i} className="bg-electric text-blackish px-3 py-1 rounded-full">
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
+      <Ticker
+  duration={300}
+reverse={false}   className="flex gap-12 py-10 whitespace-nowrap"
+>
+  {projects.map((proj, i) => (
+    <div
+      key={proj.id}
+      className="inline-block min-w-[80vw] md:min-w-[60vw] h-[500px] relative group overflow-hidden rounded-xl shadow-xl"
+    >
+      <Link to={`/projects/${proj.id}`} className="relative block w-full h-full">
+        <img
+          src={proj.thumbnail}
+          alt={`${proj.title} background`}
+          className="absolute inset-0 object-cover w-full h-full transition duration-500 opacity-40 group-hover:opacity-70"
+        />
+        <div className="absolute inset-0 z-10 " />
+        <div className="relative z-20 flex flex-col justify-end h-full p-8">
+          <h3 className="mb-2 text-3xl font-thin text-electric drop-shadow">{proj.title}</h3>
+          <p className="mb-3 font-mono text-sm text-bone/90">{proj.subtitle}</p>
+          <p className="max-w-xl text-sm text-bone/70 line-clamp-3">{proj.description}</p>
+          <div className="flex flex-wrap gap-2 mt-4 font-mono text-xs">
+            {proj.tech.map((tool, i) => (
+              <span key={i} className="px-3 py-1 rounded-full bg-electric text-blackish">
+                {tool}
+              </span>
+            ))}
+          </div>
         </div>
-      </motion.div>
+      </Link>
+    </div>
+  ))}
+</Ticker>
+
     </section>
   );
 }

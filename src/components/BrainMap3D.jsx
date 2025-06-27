@@ -33,7 +33,7 @@ export default function BrainMap3D() {
   };
 
   return (
-    <div className="h-full w-full pointer-events-auto font-mono">
+    <div className="w-full h-full font-thin pointer-events-auto">
       <ForceGraph3D
         ref={fgRef}
         graphData={graphData}
