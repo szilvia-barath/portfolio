@@ -22,14 +22,14 @@ export default function BrainMap3D() {
     }
   }, []);
 
-  const projectMap = {
-    'GlucoReflect': 'glucoreflect',
-    'Ada Lovelace': 'ada-lovelace-storytelling',
-    'Vocabulary of Resistance': 'vocabulary-of-resistance',
-    'Towards a Grammar of Resistance': 'grammar-of-resistance',
-    'Hymn of Resistance': 'hymn-of-resistance',
-    'My Brainmap': 'brainmap'
-  };
+ const projectMap = {
+  'GlucoReflect': 'glucologs',
+  'Ada Lovelace': 'ada-lovelace-storytelling',
+  'Vocabulary of Resistance': 'vocabulary-of-resistance',
+  'Towards a Grammar of Resistance': 'grammar-of-resistance',
+  'Hymn of Resistance': 'hymn-of-resistance',
+  'Brainmap': 'brainmap' // ← match node.id from graphData.js
+};
 
   const handleNodeClick = (node) => {
     const slug = projectMap[node.id];

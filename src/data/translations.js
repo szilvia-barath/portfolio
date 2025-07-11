@@ -1,301 +1,91 @@
  export const translations = {
  "en": {
-  "explore": "Explore my mind",
-  "nodes": {
-    "Mind": {
-      "id": "Mind",
-      "description": "The central node: your living connector — code, memory, resistance, and care."
-    },
-    "MAC": {
-      "id": "MAC",
-      "description": "A research framework exploring post-postmodern phenomena and the shaping of post-human culture, society, and education — through artistic practice, digital resistance, and ethical design."
-    },
-    "Interfacial Thinking": {
-      "id": "Interfacial Thinking",
-      "description": "Treating interfaces as spaces of cultural negotiation — where meaning, structure, and identity are not just displayed, but enacted."
-    },
-    "Languages": {
-      "id": "Languages",
-      "description": "Where linguistic fluency and computational fluency meet: human languages, programming languages, and the patterns they shape in thought."
-    },
-    "Experiments": {
-      "id": "Experiments",
-      "description": "Prototypes, essays, and creative outputs — moments where theory meets code and ideas take on form."
-    },
-    "Research": {
-      "id": "Research",
-      "description": "Your inquiries, frameworks, and provocations — what you question, test, or want to reimagine."
-    },
-    "Poetic UX": {
-      "id": "Poetic UX",
-      "description": "Interfaces that spark emotion, reflection, and calm — poetic not just in content, but in how they care, support, and resonate."
-    },
-    "Multimodal": {
-      "id": "Multimodal",
-      "description": "Working across text, sound, visuals, interaction, and motion — meaning from the weave, not the thread."
-    },
-    "Cultural Code": {
-      "id": "Cultural Code",
-      "description": "Code as memory, identity, and resistance — shaped by who writes it, and for whom."
-    },
-    "Synesthetic Design": {
-      "id": "Synesthetic Design",
-      "description": "Translating between senses — from sound to color, language to motion, feeling to interface."
-    },
-    "Ethical Aesthetics": {
-      "id": "Ethical Aesthetics",
-      "description": "Design guided by care, consent, and context — where aesthetics carry responsibility."
-    },
-    "Conversational Interfaces": {
-      "id": "Conversational Interfaces",
-      "description": "Designing systems for written and spoken interaction — accessible, emotional, human."
-    },
-    "Language Models as Collaborators": {
-      "id": "Language Models as Collaborators",
-      "description": "Working with AI as creative colleagues — shaping language through empathy and prompts."
-    },
-    "Embedded Interaction": {
-      "id": "Embedded Interaction",
-      "description": "Interfaces embedded in bodies, lives, and routines — ambient, intuitive, urgent."
-    },
-    "Visual Narratives": {
-      "id": "Visual Narratives",
-      "description": "Stories told through structure, space, and motion — meaning made visual."
-    },
-    "Voice UI": {
-      "id": "Voice UI",
-      "description": "Voice as input and output — accessible, affective, and immediate."
-    },
-    "Text-to-Feeling Translation": {
-      "id": "Text-to-Feeling Translation",
-      "description": "Systems that turn language into emotion, visuals, or sensation — bridging meaning and affect."
-    },
-    "Hungarian": {
-      "id": "Hungarian",
-      "description": "Root language of emotion, memory, and intimacy."
-    },
-    "Italian": {
-      "id": "Italian",
-      "description": "Language of adulthood, aesthetic nuance, and emotional expression."
-    },
-    "English": {
-      "id": "English",
-      "description": "Language of research, connection, and global discourse."
-    },
-    "HTML & CSS": {
-      "id": "HTML & CSS",
-      "description": "Structure and surface of the web — minimal, expressive, essential."
-    },
-    "JavaScript": {
-      "id": "JavaScript",
-      "description": "Logical, chaotic, poetic — the evolving dance of structure and surprise."
-    },
-    "Vue & React": {
-      "id": "Vue & React",
-      "description": "Your expressive frontend frameworks — flexible and reactive, structured and alive."
-    },
-    "GlucoReflect": {
-      "id": "GlucoReflect",
-      "description": "A tool for diabetics — blending glucose tracking, reflection, and emotional support."
-    },
-    "Hymn of Resistance": {
-      "id": "Hymn of Resistance",
-      "description": "A multilingual, multisensory digital poem — music, movement, and protest as interface."
-    },
-    "Vocabulary of Resistance": {
-      "id": "Vocabulary of Resistance",
-      "description": "A map exploring how resistance is written, said, and shared."
-    },
-    "Towards a Grammar of Resistance": {
-      "id": "Towards a Grammar of Resistance",
-      "description": "The theoretical foundation of MAC — an academic paper."
-    },
-    "Learn to Resist": {
-      "id": "Learn to Resist",
-      "description": "A reflection on post-human education."
-    },
-    "The First Cyborgs": {
-      "id": "The First Cyborgs",
-      "description": "A poetic-critical essay on diabetes tech, exploitative devices, and cyberbodily autonomy."
-    },
-    "Ada Lovelace": {
-      "id": "Ada Lovelace",
-      "description": "A storytelling website and chatbot — about the birth of algorithms."
-    },
-    "Wearable Paintings": {
-      "id": "Wearable Paintings",
-      "description": "Hand-painted clothing — glowing, metallic, and uniquely expressive acts of lived resistance."
-    },
-    "Patches & Ceramics": {
-      "id": "Patches & Ceramics",
-      "description": "Small crafted pieces — from stitched patches to hand-glazed clay."
-    },
-    "Knits & Crochets": {
-      "id": "Knits & Crochets",
-      "description": "Looped language — warmth and care made material."
-    },
-    "Collage & Drawing": {
-      "id": "Collage & Drawing",
-      "description": "Analog storytelling — layering memory, media, and form."
-    },
-    "Interactive Collage Book": {
-      "id": "Interactive Collage Book",
-      "description": "A physical/digital hybrid — interface as memory, exploration, and poetic movement."
-    },
-    "Scotty": {
-      "id": "Scotty",
-      "description": "My four-legged sidekick — the one closest to my heart."
-    }
-  }
-},
- "hu": {
-  "explore": "Fedezd fel az elmém.",
-  "nodes": {
-    "Mind": {
-      "id": "Elme",
-      "description": "A központi csomópont: élő kapcsoló – kód, emlék, ellenállás és gondoskodás."
-    },
-    "MAC": {
-      "id": "MAC",
-      "description": "Egy kutatási keretrendszer, amely a poszt-posztmodern jelenségeket és a poszthumán kultúra, társadalom és oktatás formálódását vizsgálja – művészi gyakorlat, digitális ellenállás és etikus dizájn révén."
-    },
-    "Interfacial Thinking": {
-      "id": "Interfész Gondolkodás",
-      "description": "Az interfészeket kulturális tárgyalási terekként kezelve – ahol a jelentés, struktúra és identitás nem csupán megjelenik, hanem meg is történik."
-    },
-    "Languages": {
-      "id": "Nyelvek",
-      "description": "Ahol a nyelvi folyékonyság és a számítógépes folyékonyság találkozik: emberi nyelvek, programozási nyelvek és az általuk alakított gondolkodási minták."
-    },
-    "Experiments": {
-      "id": "Kísérletek",
-      "description": "Prototípusok, esszék és kreatív kimenetek – pillanatok, ahol az elmélet találkozik a kóddal és az ötletek formát öltenek."
-    },
-    "Research": {
-      "id": "Kutatás",
-      "description": "A te kérdéseid, kereteid és provokációid – amit megkérdezel, tesztelsz vagy újragondolni akarsz."
-    },
-    "Poetic UX": {
-      "id": "Poetikus UX",
-      "description": "Olyan interfészek, amelyek érzelmet, elmélyülést és nyugalmat ébresztenek – nem csak tartalmukban költőiek, hanem abban is, hogyan gondoskodnak, támogatnak és rezonálnak."
-    },
-    "Multimodal": {
-      "id": "Multimodális",
-      "description": "Szövegen, hangon, képen, interakción és mozgáson át dolgozni – a jelentés a szövetből születik, nem az egyes szálakból."
-    },
-    "Cultural Code": {
-      "id": "Kulturális Kód",
-      "description": "A kód mint emlék, identitás és ellenállás – akitől és akinek írják, az alakítja."
-    },
-    "Synesthetic Design": {
-      "id": "Szinestéziai Dizájn",
-      "description": "Az érzékek közti fordítással – hangból szín, nyelvből mozgás, érzésből interfész."
-    },
-    "Ethical Aesthetics": {
-      "id": "Etikus Esztétika",
-      "description": "Olyan dizájn, amelyet a gondoskodás, a beleegyezés és a kontextus vezérel – ahol az esztétikum felelősséget hordoz."
-    },
-    "Conversational Interfaces": {
-      "id": "Párbeszédes Interfészek",
-      "description": "Írott és beszélt interakcióra tervezett rendszerek – hozzáférhetők, érzelmesek, emberiek."
-    },
-    "Language Models as Collaborators": {
-      "id": "Nyelvi Modellek Mint Társak",
-      "description": "Az AI-val kreatív kollégaként dolgozva – nyelvet formálni empátiával és jól megszerkesztett promptokkal."
-    },
-    "Embedded Interaction": {
-      "id": "Beágyazott Interakció",
-      "description": "Interfészek, amelyek beágyazódnak testekbe, életekbe és rutinokba – környezeti, intuitív, sürgető."
-    },
-    "Visual Narratives": {
-      "id": "Vizuális Narratívák",
-      "description": "Történetek szerkezeten, térben és mozgáson keresztül – a jelentés vizualizálva."
-    },
-    "Voice UI": {
-      "id": "Hangalapú UI",
-      "description": "A hang mint bemenet és kimenet – elérhető, érzelmes és azonnali."
-    },
-    "Text-to-Feeling Translation": {
-      "id": "Szöveg‑érzés Fordítás",
-      "description": "Olyan rendszerek, amelyek a nyelvet érzelemmé, vizuálissá vagy érzékelhetővé alakítják – hidat képezve a jelentés és az érzetek között."
-    },
-    "Hungarian": {
-      "id": "Magyar",
-      "description": "Az érzelem, emlék és intimitás gyökérnyelve."
-    },
-    "Italian": {
-      "id": "Olasz",
-      "description": "A felnőttlét, esztétikai árnyalat és érzelmi kifejezés nyelve."
-    },
-    "English": {
-      "id": "Angol",
-      "description": "A kutatás, kapcsolat és globális diskurzus nyelve."
-    },
-    "HTML & CSS": {
-      "id": "HTML & CSS",
-      "description": "A web szerkezete és felülete – minimalista, kifejező, lényegi."
-    },
-    "JavaScript": {
-      "id": "JavaScript",
-      "description": "Logikus, kaotikus, költői – a szerkezet és meglepetés folyamatos tánca."
-    },
-    "Vue & React": {
-      "id": "Vue & React",
-      "description": "A te kifejező frontend keretrendszereid – rugalmasak és reaktívak, strukturáltak és élőek."
-    },
-    "GlucoReflect": {
-      "id": "GlucoReflect",
-      "description": "Egy eszköz cukorbetegek számára – vércukor‑követést, visszatekintést és érzelmi támogatást ötvözve."
-    },
-    "Hymn of Resistance": {
-      "id": "A Válaszadás Himnusza",
-      "description": "Egy többnyelvű, több érzékű digitális költemény – zene, mozgás és tiltakozás interfészként."
-    },
-    "Vocabulary of Resistance": {
-      "id": "Az Ellenállás Szókincse",
-      "description": "Egy térkép, amely feltérképezi, hogyan írták, mondták és osztották meg az ellenállást."
-    },
-    "Towards a Grammar of Resistance": {
-      "id": "Az Ellenállás Nyelvtana Felé",
-      "description": "A MAC elméleti alapja – egy tudományos tanulmány."
-    },
-    "Learn to Resist": {
-      "id": "Tanulj Meg Ellenállni",
-      "description": "Egy reflexió a poszthumán oktatásról."
-    },
-    "The First Cyborgs": {
-      "id": "Az Első Kiborgok",
-      "description": "Egy költői‑kritikai esszé a diabétesz technológiáról, kizsákmányoló eszközökről és a kibertest autonómiájáról."
-    },
-    "Ada Lovelace": {
-      "id": "Ada Lovelace",
-      "description": "Egy történetmesélő weboldal és chatbot – az algoritmusok születéséről."
-    },
-    "Wearable Paintings": {
-      "id": "Viselhető Festmények",
-      "description": "Kézzel festett ruhadarabok – ragyogó, fémes és egyedien kifejező élő ellenállási cselekvések."
-    },
-    "Patches & Ceramics": {
-      "id": "Felvarrók és Kerámia",
-      "description": "Apró kézműves tárgyak – a varrott felvarróktól a kézzel mázolt agyagig."
-    },
-    "Knits & Crochets": {
-      "id": "Kötött és Horgolt",
-      "description": "Huroknyelv – melegség és gondoskodás anyaggá formálva."
-    },
-    "Collage & Drawing": {
-      "id": "Kollázs és Rajz",
-      "description": "Analóg történetmesélés – emlék, média és forma rétegelésével."
-    },
-    "Interactive Collage Book": {
-      "id": "Interaktív Kollázs-Könyv",
-      "description": "Egy fizikai/digitális hibrid – interfész mint emlék, felfedezés és költői mozgás."
-    },
-    "Scotty": {
-      "id": "Scotty",
-      "description": "A négy lábú társam – az, aki a legközelebb áll a szívemhez."
-    }
-  }
+    "explore": "Explore my mind",
+  nodes: [
+    // Core
+    { id: 'Mind', group: 0, description: 'The central node' },
+
+    // Group 1: Core Concepts
+    { id: 'MAC', group: 1, description: 'A research framework exploring post-postmodern phenomena and the shaping of post-human culture, society, and education through artistic practice, digital resistance, and ethical design.' },
+    { id: 'Interfacial Thinking', group: 1, description: 'Treating interfaces as spaces of cultural negotiation — where meaning, structure, and identity are enacted.' },
+    { id: 'Languages', group: 1, description: 'Where linguistic fluency and computational fluency meet: human languages, programming languages, and the patterns they shape in thought.' },
+    { id: 'Experiments', group: 1, description: 'Prototypes, essays, and creative outputs.' },
+    { id: 'Research', group: 1, description: 'My inquiries, frameworks, and what I question, test, or want to reimagine.' },
+
+    // Group 2: Aesthetics + Emotion
+    { id: 'Poetic UX', group: 2, description: 'Interfaces that spark emotion, reflection, and calm — poetic not just in content, but in how they care, support, and resonate.' },
+    { id: 'Multimodal', group: 2, description: 'Working across text, sound, visuals, interaction, and motion.' },
+    { id: 'Cultural Code', group: 2, description: 'Code as memory, identity, and resistance shaped by who writes it, and for whom.' },
+    { id: 'Synesthetic Design', group: 2, description: 'Translating between senses — from sound to color, language to motion, feeling to interface.' },
+    { id: 'Ethical Aesthetics', group: 2, description: 'Design guided by care, consent, and context — where aesthetics carry responsibility.' },
+
+    // Group 3: Mediums & Tools
+    { id: 'Conversational Interfaces', group: 3, description: 'Designing systems for written and spoken interaction — accessible, emotional, human.' },
+    { id: 'Language Models as Collaborators', group: 3, description: 'Working with AI as creative colleagues.' },
+    { id: 'Embedded Interaction', group: 3, description: 'Interfaces embedded in bodies, lives, and routines.' },
+    { id: 'Visual Narratives', group: 3, description: 'Stories told through structure, space, and motion — meaning made visual.' },
+    { id: 'Voice UI', group: 3, description: 'Voice as input and output — accessible, affective, and immediate.' },
+    { id: 'Text-to-Feeling Translation', group: 3, description: 'Systems that turn language into emotion, visuals, or sensation — bridging meaning and affect.' },
+
+    // Group 4: Languages + Code Fluency
+    { id: 'Hungarian', group: 4, description: 'Mother tongue - language of emotion, memory, and intimacy.' },
+    { id: 'Italian', group: 4, description: 'Language of  aesthetic nuance and emotional expression.' },
+    { id: 'English', group: 4, description: 'Language of research, connection, and global discourse.' },
+    { id: 'HTML & CSS', group: 4, description: 'Structure and surface of the web.' },
+    { id: 'JavaScript', group: 4, description: 'Logical, chaotic, poetic.' },
+    { id: 'Vue & React', group: 4, description: 'My expressive frontend frameworks.' },
+
+    // Group 5: Projects / Experiments
+    { id: 'GlucoLogs', group: 5, description: 'A tool for diabetics — blending glucose tracking, reflection, and ethical data management.' },
+    { id: 'Hymn of Resistance', group: 5, description: 'A multilingual, multisensory digital poem — music, movement, and protest as interface.' },
+    { id: 'Vocabulary of Resistance', group: 5, description: 'A map exploring vocabulary connected to the word "resistance".' },
+    { id: 'Towards a Grammar of Resistance', group: 5, description: 'The theoretical foundation of MAC — an academic paper.' },
+    { id: 'Learn to Resist', group: 5, description: 'A reflection on post-human education.' },
+    { id: 'The First Cyborgs', group: 5, description: 'A poetic-critical essay on diabetes tech, exploitative devices, and cyberbodily autonomy.' },
+    { id: 'Ada Lovelace', group: 5, description: 'A storytelling website and chatbot — about the birth of algorithms.' },
+
+    // Group 6: Artistic Activity
+    { id: 'Wearable Paintings', group: 6, description: 'Hand-painted, upcycled clothing.' },
+    { id: 'Patches & Ceramics', group: 6, description: 'Small crafted pieces —  stitched patches, hand-glazed clay.' },
+    { id: 'Knits & Crochets', group: 6, description: 'Loops — warmth and handmade garments.' },
+    { id: 'Collage & Drawing', group: 6, description: 'Analog storytelling — layering memory, media, and form.' },
+    { id: 'Interactive Collage Book', group: 6, description: 'A physical book entitled "Holiday to the Moon."' },
+    { id: 'Scotty', group: 6, description: 'My four-legged sidekick — the one closest to my heart.' },
+
+    { id: '✶', group: 99, decorative: true },
+    { id: '∞', group: 99, decorative: true },
+    { id: '↺', group: 99, decorative: true },
+    { id: '夢', group: 99, decorative: true },
+    { id: '♡', group: 99, decorative: true },
+      { id: '✶', group: 99, decorative: true },
+    { id: '∞', group: 99, decorative: true },
+    { id: '↺', group: 99, decorative: true },
+    { id: '夢', group: 99, decorative: true },
+    { id: '♡', group: 99, decorative: true },
+       { id: '✶', group: 99, decorative: true },
+    { id: '∞', group: 99, decorative: true },
+    { id: '↺', group: 99, decorative: true },
+    { id: '夢', group: 99, decorative: true },
+    { id: '♡', group: 99, decorative: true },
+      { id: '✶', group: 99, decorative: true },
+    { id: '∞', group: 99, decorative: true },
+    { id: '↺', group: 99, decorative: true },
+    { id: '夢', group: 99, decorative: true },
+    { id: '♡', group: 99, decorative: true }
+  ],
+  links: [
+    { source: 'Mind', target: 'MAC' }, { source: 'Mind', target: 'Interfacial Thinking' },
+    { source: 'Mind', target: 'Languages' }, { source: 'Mind', target: 'Experiments' }, { source: 'Mind', target: 'Research' },
+    { source: 'MAC', target: 'Poetic UX' }, { source: 'MAC', target: 'Ethical Aesthetics' }, { source: 'MAC', target: 'Cultural Code' },
+    { source: 'MAC', target: 'Text-to-Feeling Translation' },
+    { source: 'Interfacial Thinking', target: 'Voice UI' }, { source: 'Interfacial Thinking', target: 'Conversational Interfaces' }, { source: 'Interfacial Thinking', target: 'Visual Narratives' },
+    { source: 'Languages', target: 'Hungarian' }, { source: 'Languages', target: 'Italian' }, { source: 'Languages', target: 'English' },
+    { source: 'Languages', target: 'HTML & CSS' }, { source: 'Languages', target: 'JavaScript' }, { source: 'Languages', target: 'Vue & React' },
+    { source: 'Experiments', target: 'GlucoLogs' }, { source: 'Experiments', target: 'Hymn of Resistance' }, { source: 'Experiments', target: 'Ada Lovelace' },
+    { source: 'Research', target: 'Towards a Grammar of Resistance' }, { source: 'Research', target: 'Learn to Resist' }, { source: 'Research', target: 'The First Cyborgs' },
+    { source: 'Research', target: 'Vocabulary of Resistance' },     { source: 'Scotty', target: 'Mind' },
+    { source: 'Poetic UX', target: 'Synesthetic Design' }, { source: 'Multimodal', target: 'Visual Narratives' },
+  ]
 },
 "it": {
   "explore": "Esplora la mia mente.",
