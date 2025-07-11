@@ -135,7 +135,7 @@ export default function Projects() {
                 <img
                   src={proj.thumbnail}
                   alt={proj.title}
-                  className="object-cover w-full h-64 transition sm:h-72 md:h-full grayscale group-hover:grayscale-0"
+                  className="object-contain w-full h-64 transition sm:h-72 md:h-full grayscale group-hover:grayscale-0"
                 />
               </Link>
 
