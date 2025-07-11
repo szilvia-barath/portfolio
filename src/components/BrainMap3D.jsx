@@ -55,6 +55,7 @@ export default function BrainMap3D() {
       <ForceGraph3D
         ref={fgRef}
         graphData={graphData}
+        backgroundColor='#220340'
         nodeLabel={getNodeLabel}
         nodeAutoColorBy="group"
         linkDirectionalParticles={2000}

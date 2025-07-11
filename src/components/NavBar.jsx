@@ -12,15 +12,15 @@ export default function Navbar({ active, onNavClick }) {
   ];
 
   const handleClick = (id) => {
-    onNavClick(id);         // scroll to section
-    setIsOpen(false);       // close mobile menu
+    onNavClick(id);
+    setIsOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-[1000] w-full bg-[#111] text-bone md:w-20 md:h-screen md:flex md:flex-col md:items-center md:border-r border-b border-bone/20 md:border-b-0">
-      {/* Desktop Navigation */}
+    <nav className="fixed top-0 left-0 z-50 w-full bg-[#0e0e0e] text-bone border-r-4 border-electric md:w-20 md:h-screen md:flex md:flex-col md:items-center md:border-b-0">
+      {/* Desktop Nav */}
       <div className="flex-col items-center hidden gap-6 py-6 md:flex">
-        <div className="w-8 h-8 rounded-full"><img src="./icon_scott.svg"/></div>
+        <div className="w-8 h-8 rounded-full bg-electric" />
         <div className="flex flex-col gap-4 mt-8 font-mono text-xs text-left">
           {navItems.map((item) => (
             <button
@@ -44,13 +44,13 @@ export default function Navbar({ active, onNavClick }) {
           className="text-2xl focus:outline-none"
           aria-label="Toggle menu"
         >
-          ☰
+          ♡
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#111] px-4 py-6 flex flex-col gap-4 font-mono text-sm border-t border-bone/20 z-[1001]">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#1a2129] px-4 py-6 flex flex-col gap-4 font-mono text-sm border-t border-electric z-[1001]">
           {navItems.map((item) => (
             <button
               key={item.id}
