@@ -25,7 +25,7 @@ export default function AboutMe() {
       className="w-full bg-blackish text-bone"
     >
       {/* Intro Section */}
-      <div className="flex flex-col items-center justify-center min-h-[80vh] px-6 py-20 text-center sm:px-12" id="about">
+<div className="flex flex-col items-center justify-center min-h-[80vh] px-6 py-20 text-center sm:px-12">
         <motion.h2 className="mb-6 text-4xl md:text-6xl text-electric poetic-heading">About</motion.h2>
         <p className="max-w-2xl mb-4 text-lg leading-relaxed text-justify">
           I believe the most meaningful work happens between disciplines — where code, culture, language, and design intersect.
@@ -93,14 +93,15 @@ export default function AboutMe() {
       <div className="flex items-center justify-center min-h-[60vh] px-6 py-5 sm:px-12">
         <motion.a
           href='/cv.pdf'
-          download
+          target='_blank'
+          rel='noopener noreferrer'
           className="px-6 py-3 font-mono text-lg font-semibold border-l-4 border-electric button-glow hover:bg-blackish hover:text-electric"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Download CV
+          View CV
         </motion.a>
       </div>
     </motion.section>

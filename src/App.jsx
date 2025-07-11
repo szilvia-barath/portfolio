@@ -67,7 +67,7 @@ export default function App() {
 
       <Navbar active={activeSection} onNavClick={handleNavClick} />
 
-      <section ref={heroRef}     id="hero"     className="relative w-full h-screen overflow-hidden">
+<section id="hero" className="relative w-full h-screen overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           {showBrain && <BrainMap3D aboutRef={aboutRef} />}
         </div>

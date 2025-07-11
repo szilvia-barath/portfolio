@@ -87,14 +87,13 @@ export default function Projects() {
   }, [selectedTag]);
 
   return (
-    <section className="relative min-h-screen px-20 py-20 bg-blackish text-bone">
-      <div className="px-6 mb-10 md:px-20">
-        <h2 className="pl-1 text-4xl font-light tracking-tight md:text-6xl text-electric">Projects</h2>
-        <p className="pl-1 mt-6 text-sm text-bone/80 md:text-base">Filter by tag:</p>
+    <section className="relative min-h-screen px-4 py-20 bg-blackish text-bone md:px-20">
+      <div className="px-4 mb-10 md:px-20">
+        <h2 className="text-4xl font-light tracking-tight md:text-6xl text-electric">Projects</h2>
+        <p className="mt-6 text-sm text-bone/80 md:text-base">Filter by tag:</p>
       </div>
 
-      {/* Filter Buttons */}
-      <div className="flex flex-wrap gap-2 px-20 mb-16 md:px-20">
+      <div className="flex flex-wrap gap-2 px-4 mb-16 md:px-20">
         <button
           onClick={() => setSelectedTag('All')}
           className={`px-3 py-1 font-mono text-xs rounded-full border ${
@@ -120,13 +119,12 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Project Grid */}
-      <div className="flex flex-col gap-24 px-6 pl-10 md:px-20">
+      <div className="flex flex-col gap-24 px-4 md:px-20">
         <AnimatePresence>
           {filteredProjects.map((proj, i) => (
             <motion.div
               key={proj.id}
-              className="grid items-center grid-cols-1 gap-10 pl-6 group md:grid-cols-2"
+              className="grid items-center grid-cols-1 gap-10 group md:grid-cols-2"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -145,7 +143,7 @@ export default function Projects() {
                   {proj.title}
                   <span className="block mt-1 text-sm italic text-bone/70">{proj.subtitle}</span>
                 </h3>
-                <p className="text-sm leading-relaxed text-bone/60 max-w-prose">{proj.description}</p>
+                <p className="text-sm leading-relaxed text-justify text-bone/60 max-w-prose">{proj.description}</p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {proj.tech.map((tool, idx) => (
                     <span

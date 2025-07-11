@@ -37,7 +37,6 @@ export default function Gallery() {
   return (
     <section
       className="w-full px-4 py-16 overflow-x-auto sm:px-6 sm:py-20 text-bone bg-blackish"
-      id="gallery"
     >
       <h2 className="px-20 mb-6 text-3xl font-light sm:text-4xl text-electric">
         Artworks

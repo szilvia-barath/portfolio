@@ -1,51 +1,42 @@
-import { motion } from 'framer-motion';
- import scottyIcon from '../assets/icon_scott.svg';
+import { useState } from 'react';
 
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-const navItems = [
-  { id: 'hero', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'gallery', label: 'Gallery' },
-  { id: 'contact', label: 'Contact' },
-];
-
-export default function Navbar({ active, onNavClick }) {
   return (
-    <nav className="fixed top-0 left-0 h-screen w-20 bg-[#111] text-bone flex flex-col items-center py-6 z-50 border-r border-fuchsia-500">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="flex flex-col items-center gap-6"
-      >
-        {/* Logo */}
-        <div className="w-8 h-8 rounded-full">
-
-            <img
-                 src={scottyIcon}
-              alt="Scotty icon"
-              className="object-contain w-full h-full bg-electric/10 hover:bg-electric/90"
-            />
+    <nav className="fixed top-0 left-0 z-[1000] w-full bg-[#111] text-bone md:w-20 md:h-screen md:flex md:flex-col md:items-center md:border-r border-b border-bone/20 md:border-b-0">
+      {/* Desktop Navigation */}
+      <div className="flex-col items-center hidden gap-6 py-6 md:flex">
+        <div className="w-8 h-8 rounded-full bg-electric" />
+        <div className="flex flex-col gap-4 mt-8 font-mono text-xs text-left">
+          <a href="#hero" className="hover:text-electric">Home</a>
+          <a href="#about" className="hover:text-electric">About</a>
+          <a href="#projects" className="hover:text-electric">Projects</a>
+          <a href="#contact" className="hover:text-electric">Contact</a>
         </div>
+      </div>
 
-        {/* Nav Links */}
-        <div className="flex flex-col gap-8 mt-10 font-mono text-xs text-left">
-          {navItems.map(({ id, label }) => (
-            <button
-              key={id}
-              onClick={() => onNavClick(id)}
-              className={
-                id === active
-                  ? 'text-electric font-bold focus:outline-none'
-                  : 'opacity-60 hover:text-electric focus:outline-none'
-              }
-            >
-              {label}
-            </button>
-          ))}
+      {/* Mobile Header */}
+      <div className="flex items-center justify-between px-4 py-3 md:hidden">
+        <div className="font-mono text-lg">SB</div>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-2xl focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#111] px-4 py-6 flex flex-col gap-4 font-mono text-sm border-t border-bone/20 z-[1001]">
+          <a href="#hero" onClick={() => setIsOpen(false)} className="hover:text-electric">Home</a>
+          <a href="#about" onClick={() => setIsOpen(false)} className="hover:text-electric">About</a>
+          <a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-electric">Projects</a>
+          <a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-electric">Contact</a>
         </div>
-      </motion.div>
+      )}
     </nav>
   );
 }

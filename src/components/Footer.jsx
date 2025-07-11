@@ -15,7 +15,7 @@ export default function Footer() {
       animate={mounted ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 3, ease: 'easeOut' }}
       className="relative flex flex-col items-center justify-center w-screen min-h-screen py-10 text-center animated-gradient"
-    id="contact">
+ >
       <div className="max-w-xl">
         <h2 className="mb-6 font-mono text-3xl sm:text-4xl md:text-5xl text-electric">
           Let’s create something meaningful together.
