@@ -67,7 +67,7 @@ export default function App() {
 
       <Navbar active={activeSection} onNavClick={handleNavClick} />
 
-<section id="hero" className="relative w-full h-screen overflow-hidden">
+<section id="hero" className="relative w-full h-screen overflow-hidden scroll-mt-24">
         <div className="absolute inset-0 z-0 pointer-events-none">
           {showBrain && <BrainMap3D aboutRef={aboutRef} />}
         </div>
@@ -95,12 +95,12 @@ export default function App() {
         </div>
       </section>
 
-      <section ref={aboutRef}    id="about"    className="flex flex-col items-center px-4 min-w-screen animated-gradient"><AboutMe/></section>
-      <section ref={projectsRef} id="projects" className="w-full px-4 animated-gradient md:px-4 bg-blackish text-bone"><Projects/></section>
-      <section ref={galleryRef}  id="gallery"  className="w-full px-4 bg-blackish text-bone animated-gradient"><Gallery/></section>
+      <section ref={aboutRef}    id="about"    className="flex flex-col items-center px-4 scroll-mt-24 min-w-screen animated-gradient"><AboutMe/></section>
+      <section ref={projectsRef} id="projects" className="w-full px-4 scroll-mt-24 animated-gradient md:px-4 bg-blackish text-bone"><Projects/></section>
+      <section ref={galleryRef}  id="gallery"  className="w-full px-4 scroll-mt-24 bg-blackish text-bone animated-gradient"><Gallery/></section>
 
       <motion.section
-        ref={contactRef} id="contact" className="flex items-center justify-center w-screen h-screen md:px-0 bg-blackish text-bone"
+        ref={contactRef} id="contact" className="flex items-center justify-center w-screen h-screen scroll-mt-24 md:px-0 bg-blackish text-bone"
         initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: 'easeOut' }} viewport={{ once: true, amount: 0.4 }}
       >
