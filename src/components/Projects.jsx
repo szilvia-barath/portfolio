@@ -71,7 +71,7 @@ const projects = [
     tech: ['React', 'Canvas', 'WebAudio API'],
     keywords: ['poetic UX', 'creative coding', 'experimental UI', 'frontend prototypes'],
     thumbnail: mindImg,
-  },
+  }
 ];
 
 const allTags = Array.from(
@@ -93,10 +93,10 @@ export default function Projects() {
         <p className="mt-6 text-sm text-bone/80 md:text-base">Filter by tag:</p>
       </div>
 
-      <div className="flex flex-wrap gap-2 px-4 mb-16 md:px-20">
+      <div className="flex flex-wrap justify-start gap-2 px-4 mb-16 md:px-20">
         <button
           onClick={() => setSelectedTag('All')}
-          className={`px-3 py-1 font-mono text-xs rounded-full border ${
+          className={`px-3 py-1 font-mono text-xs rounded-full border whitespace-nowrap ${
             selectedTag === 'All'
               ? 'bg-electric text-blackish border-electric'
               : 'text-bone border-bone/30 hover:border-electric hover:text-electric'
@@ -108,7 +108,7 @@ export default function Projects() {
           <button
             key={tag}
             onClick={() => setSelectedTag(tag)}
-            className={`px-3 py-1 font-mono text-xs rounded-full border ${
+            className={`px-3 py-1 font-mono text-xs rounded-full border whitespace-nowrap ${
               selectedTag === tag
                 ? 'bg-electric text-blackish border-electric'
                 : 'text-bone border-bone/30 hover:border-electric hover:text-electric'
@@ -119,31 +119,38 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="flex flex-col gap-24 px-4 md:px-20">
+      <div className="flex flex-col gap-16 px-4 md:px-0">
         <AnimatePresence>
           {filteredProjects.map((proj, i) => (
             <motion.div
               key={proj.id}
-              className="grid items-center grid-cols-1 gap-10 group md:grid-cols-2"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="relative w-full mx-auto overflow-hidden rounded-2xl shadow-xl bg-[#111] hover:bg-[#181818] transition group md:grid md:grid-cols-2 md:gap-10 md:max-w-5xl"
             >
-              <Link to={`/projects/${proj.id}`} className="block overflow-hidden shadow-lg rounded-xl">
+              {/* Image */}
+              <Link to={`/projects/${proj.id}`} className="block h-full">
                 <img
                   src={proj.thumbnail}
                   alt={proj.title}
-                  className="object-contain w-full transition duration-500 h-72 md:h-96 grayscale group-hover:grayscale-0"
+                  className="object-cover w-full h-64 transition sm:h-72 md:h-full grayscale group-hover:grayscale-0"
                 />
               </Link>
 
-              <div className="flex flex-col gap-3">
-                <h3 className="relative text-2xl font-light md:text-3xl text-electric">
-                  {proj.title}
-                  <span className="block mt-1 text-sm italic text-bone/70">{proj.subtitle}</span>
-                </h3>
-                <p className="text-sm leading-relaxed text-justify text-bone/60 max-w-prose">{proj.description}</p>
+              {/* Content */}
+              <div className="flex flex-col justify-between gap-4 p-6 md:p-8">
+                <div>
+                  <h3 className="text-2xl font-light text-electric md:text-3xl">
+                    {proj.title}
+                    <span className="block mt-1 text-sm italic text-bone/70">{proj.subtitle}</span>
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-justify text-bone/60">
+                    {proj.description}
+                  </p>
+                </div>
+
                 <div className="flex flex-wrap gap-2 mt-4">
                   {proj.tech.map((tool, idx) => (
                     <span
@@ -154,6 +161,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+
                 <div className="mt-2 font-mono text-xs text-bone/60">
                   {proj.keywords.join(' • ')}
                 </div>
