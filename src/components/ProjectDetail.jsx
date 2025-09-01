@@ -52,7 +52,7 @@ const projects = {
     description: 'Hymn of Resistance is an interactive art piece that transforms a nearly century-old anti-fascist speech into a multisensory experience. The speaker remains unnamed, allowing the emotional register of the words to take center stage. The interface responds dynamically to shifts in tone — bursts of rage trigger visual distortions, while moments of hope pulse gently through light and sound. Designed with React, the Canvas API, and WebAudio, the piece is both a standalone digital artwork and an evolving prototype for a VJ plugin or live audiovisual tool. It asks: what does resistance feel like when rendered through code?',
     tech: ['React', 'Canvas', 'WebAudio API'],
     heroImage: hymnImg,
-    status: 'https://hymn-of-resistance.netlify.app/'
+    status: 'Available upon request'
   },
 
   brainmap: {
