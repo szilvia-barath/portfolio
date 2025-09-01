@@ -34,7 +34,7 @@ const projects = {
     description: 'This project is a beta-stage frontend prototype that maps a vocabulary of resistance. Through interactive graph visualization and dynamic image interpretation, it reveals both the emotional charge and relational depth of language. Built using React and Three.js, the prototype serves as both a speculative design tool and a research interface.',
     tech: ['React', 'Framer Motion', 'Three.js', 'TailwindCSS', 'Unsplash API'],
     heroImage: vocabImg,
-    status: ''
+    status: 'https://vocabulary-of-resistance.netlify.app/'
   },
 
   'grammar-of-resistance': {
