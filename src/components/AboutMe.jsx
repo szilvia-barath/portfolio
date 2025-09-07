@@ -89,7 +89,7 @@ export default function AboutMe() {
         </div>
       </div>
 
-      {/* CV Section
+      {/* CV Section*/}
       <div className="flex items-center justify-center min-h-[60vh] px-6 py-5 sm:px-12">
         <motion.a
           href='./cv.pdf'
@@ -103,7 +103,7 @@ export default function AboutMe() {
         >
           View CV
         </motion.a>
-      </div> */}
+      </div>
     </motion.section>
   );
 }
