@@ -92,7 +92,7 @@ export default function AboutMe() {
       {/* CV Section*/}
       <div className="flex items-center justify-center min-h-[60vh] px-6 py-5 sm:px-12">
         <motion.a
-          href='./cv.pdf'
+          href='./cv-barath.pdf'
           target='_blank'
           rel='noopener noreferrer'
           className="px-6 py-3 font-mono text-lg font-semibold border-l-4 border-electric button-glow hover:bg-blackish hover:text-electric"
